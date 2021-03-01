@@ -40,25 +40,3 @@ struct Dog {
 var dog = Dog(name: "Bob")
 dog.bark()
 dog.makeAnonymous()
-print()
-
-struct Permission {
-    let name = "Permission"
-    init() {
-        print("Set permissions")
-    }
-}
-
-struct User {
-    var username: String
-    lazy var permission = Permission();
-    static var count = 0
-
-    init(username: String) {
-        self.username = "Anonymous"
-        print("Creating a new user!")
-        User.count += 1
-    }
-}
-var user = User(username: "twostraws")
-print(user.permission.name)
